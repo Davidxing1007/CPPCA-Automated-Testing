@@ -1,0 +1,21 @@
+
+Log Entry : 1:37:15 PM Monday, 14 March 2022
+ Log :Integration had failed with error: Error occurred in the Integration. Kindly try again !
+ Status :Failed
+-------------------------------
+
+Log Entry : 1:38:33 PM Monday, 14 March 2022
+ Log :
+      - Opty Number: 122906
+      - Activity Number: 121953
+      - File Name: PCA_20220314053809.pdf
+ Status :Passed
+-------------------------------
+
+Log Entry : 4:22:13 PM Monday, 14 March 2022
+ Log :
+      - Opty Number: 122906
+      - Activity Number: 121960
+      - File Name: PCA_20220314082134.pdf
+ Status :Passed
+-------------------------------
