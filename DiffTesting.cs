@@ -71,16 +71,11 @@ namespace DiffTesting
                     string logMsg = $"{indent}Opty Number: {OptyNumber}{indent}Activity Number: {reportResponse.ActivityNumber}{indent}File Name: {reportResponse.FileName}";
                     if (diffReport.totalDiff != 0)
                     {
+                        //Writing HTML report conditionally
                         await File.WriteAllTextAsync(Context.TestRunDirectory + "/DiffReport.html", diffReport.htmlDiffHeader + diffReport.htmlDiffBody);
                         logMsg += $"{indent}Different lines: {diffReport.insertCounter} Inserted, {diffReport.deleteCounter} Deleted";
                     }
                     LogTesting(logMsg, w);
-
-                    //Writing HTML report conditionally
-                    if (diffReport.totalDiff != 0)
-                    {
-                        await File.WriteAllTextAsync(Context.TestRunDirectory + "/DiffReport.html", diffReport.htmlDiffHeader + diffReport.htmlDiffBody);
-                    }
                     Assert.IsTrue(diffReport.insertCounter + diffReport.deleteCounter == 0);
                 }
                 else
