@@ -55,7 +55,7 @@ namespace DiffTesting
             using (StreamWriter w = File.AppendText(Context.TestDir + "/../log.txt"))
             {
                 //Checking if the Integration failed
-                if (reportResponse.Error == null)
+                if (reportResponse.Error != null)
                 {
                     LogTesting($" Integration Failed: {reportResponse.Error}", w);
                     Assert.IsNull(reportResponse.Error);
