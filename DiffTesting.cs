@@ -57,33 +57,30 @@ namespace DiffTesting
                 //Checking if the Integration failed
                 if (reportResponse.Error == null)
                 {
-                    //now we have the url, reading in the pdf reports
-                    List<string> Files = new List<string> { correctReportDir, newURL };
-                    List<string> parsedText = PdfToParsedText(Files);
-
-                    DiffPaneModel diff = InlineDiffBuilder.Diff(parsedText[0], parsedText[1]);
-                    // DiffReport is a customised object
-                    DiffReport diffReport = new DiffReport(correctReportDir, newURL);
-                    diffReport.RunDiffReport(diff);
-
-                    //In-test Logging
-                    string indent = "\n      - ";
-                    string logMsg = $"{indent}Opty Number: {OptyNumber}{indent}Activity Number: {reportResponse.ActivityNumber}{indent}File Name: {reportResponse.FileName}";
-                    if (diffReport.totalDiff != 0)
-                    {
-                        //Writing HTML report conditionally
-                        await File.WriteAllTextAsync(Context.TestRunDirectory + "/DiffReport.html", diffReport.htmlDiffHeader + diffReport.htmlDiffBody);
-                        logMsg += $"{indent}Different lines: {diffReport.insertCounter} Inserted, {diffReport.deleteCounter} Deleted";
-                    }
-                    LogTesting(logMsg, w);
-                    Assert.IsTrue(diffReport.insertCounter + diffReport.deleteCounter == 0);
-                }
-                else
-                {
                     LogTesting($" Integration Failed: {reportResponse.Error}", w);
                     Assert.IsNull(reportResponse.Error);
+                    return;
                 }
+                //now we have the url, reading in the pdf reports
+                List<string> Files = new List<string> { correctReportDir, newURL };
+                List<string> parsedText = PdfToParsedText(Files);
 
+                DiffPaneModel diff = InlineDiffBuilder.Diff(parsedText[0], parsedText[1]);
+                // DiffReport is a customised object
+                DiffReport diffReport = new DiffReport(correctReportDir, newURL);
+                diffReport.RunDiffReport(diff);
+
+                //In-test Logging
+                string indent = "\n      - ";
+                string logMsg = $"{indent}Opty Number: {OptyNumber}{indent}Activity Number: {reportResponse.ActivityNumber}{indent}File Name: {reportResponse.FileName}";
+                if (diffReport.totalDiff != 0)
+                {
+                    //Writing HTML report conditionally
+                    await File.WriteAllTextAsync(Context.TestRunDirectory + "/DiffReport.html", diffReport.htmlDiffHeader + diffReport.htmlDiffBody);
+                    logMsg += $"{indent}Different lines: {diffReport.insertCounter} Inserted, {diffReport.deleteCounter} Deleted";
+                }
+                LogTesting(logMsg, w);
+                Assert.IsTrue(diffReport.insertCounter + diffReport.deleteCounter == 0);
             }
 
         }
