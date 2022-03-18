@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = DiffTesting
-build_property.ProjectDir = C:\David\WORK - Delivery\AFG\Testing\CPPCA Automated Testing\CPPCA-Automated-Testing\
+build_property.ProjectDir = C:\GitHub\CPPCA-Automated-Testing\

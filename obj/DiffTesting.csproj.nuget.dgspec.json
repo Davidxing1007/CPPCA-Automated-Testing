@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\David\\WORK - Delivery\\AFG\\Testing\\CPPCA Automated Testing\\CPPCA-Automated-Testing\\DiffTesting.csproj": {}
+    "C:\\GitHub\\CPPCA-Automated-Testing\\DiffTesting.csproj": {}
   },
   "projects": {
-    "C:\\David\\WORK - Delivery\\AFG\\Testing\\CPPCA Automated Testing\\CPPCA-Automated-Testing\\DiffTesting.csproj": {
+    "C:\\GitHub\\CPPCA-Automated-Testing\\DiffTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\David\\WORK - Delivery\\AFG\\Testing\\CPPCA Automated Testing\\CPPCA-Automated-Testing\\DiffTesting.csproj",
+        "projectUniqueName": "C:\\GitHub\\CPPCA-Automated-Testing\\DiffTesting.csproj",
         "projectName": "DiffTesting",
-        "projectPath": "C:\\David\\WORK - Delivery\\AFG\\Testing\\CPPCA Automated Testing\\CPPCA-Automated-Testing\\DiffTesting.csproj",
-        "packagesPath": "C:\\Users\\daxing\\.nuget\\packages\\",
-        "outputPath": "C:\\David\\WORK - Delivery\\AFG\\Testing\\CPPCA Automated Testing\\CPPCA-Automated-Testing\\obj\\",
+        "projectPath": "C:\\GitHub\\CPPCA-Automated-Testing\\DiffTesting.csproj",
+        "packagesPath": "C:\\Users\\edspeight\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\CPPCA-Automated-Testing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\daxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edspeight\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
